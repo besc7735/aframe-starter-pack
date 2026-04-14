@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>the cat is like me fr</title>
     <script src="https://aframe.io/releases/1.7.1/aframe.min.js"> </script>
+  
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      <a-assets>
+        <a-asset-item id="merc" src="assets/32-mercedes-benz-gls-580-2020/uploads_files_2787791_Mercedes+Benz+GLS+580.obj"></a-asset-item>
+        <a-asset-item id="cat" src="assets/Cat_v1/12221_Cat_v1_l3.obj"></a-asset-item>
+        <img id="sky" src="assets/sky.jpg">
+        <img id="wrap" src="assets/gold.jpg">
+
+      </a-assets>
+      <a-obj-model src="#merc" position="-1 0 -1" scale="1 1 1" material="shader:standard;src:#wrap"></a-obj-model>
+      <a-obj-model src="#cat" position="1.2 0.5 -5" scale="0.03 0.03 0.03" rotation="-90 0 0"></a-obj-model>
+
+      
+      <a-sky src="#sky">
     </a-scene>
   </body>
 </html>
